@@ -13,11 +13,11 @@ def createExpList(target, exp):
         candidate = math.pow(currNum, exp)
         currNum = currNum + 1
 
-def genChildren(target, hMap):
+def genChildren(target, children):
     i = 0
     for i in range(0,len(expList)):
         if (expList[i] <= target[0]):
-            hMap[target[0]-expList[i]] = target[1] + 1
+            children[target[0]-expList[i]] = target[1] + 1
 
 def min_terms(target, exp):
     createExpList(target, exp)
